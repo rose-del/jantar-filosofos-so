@@ -1,4 +1,4 @@
-package com.exemplo.posto;
+package src.main.java.posto;
 
 public class Main {
     public static void main(String[] args) {

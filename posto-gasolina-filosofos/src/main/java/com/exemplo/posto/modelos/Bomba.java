@@ -1,4 +1,4 @@
-package com.exemplo.posto.modelos;
+package modelos;
 
 public class Bomba {
     private final int id;

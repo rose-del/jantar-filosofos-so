@@ -1,8 +1,15 @@
-package com.exemplo.posto.modelos;
+package modelos;
+
+import sincronizacao.Frentista;
+
+
 
 // Arquivo base para Rose completar
-public class Carro extends Thread {
-    public Carro(int id, Bomba esquerda, Bomba direita, Semaphore frentista) {
+public class Carro  {
+    private int id;
+    private Frentista frentista;
+
+    public Carro(int id, Bomba esquerda, Bomba direita, Frentista frentista) {
         // Rose vai implementar
     }
 
@@ -10,4 +17,8 @@ public class Carro extends Thread {
     public void run() {
         // Rose vai implementar o loop do carro
     }
+    public int getId(){
+        return id;
+    }
+
 }

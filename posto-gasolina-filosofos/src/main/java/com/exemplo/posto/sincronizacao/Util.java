@@ -1,4 +1,4 @@
-package com.exemplo.posto.sincronizacao;
+package sincronizacao;
 
 public class Util {
 }

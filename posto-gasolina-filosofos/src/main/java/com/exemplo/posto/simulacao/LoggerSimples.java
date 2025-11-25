@@ -1,4 +1,4 @@
-package com.exemplo.posto.simulacao;
+package simulacao;
 
 public class LoggerSimples {
 }
