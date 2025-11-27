@@ -18,11 +18,11 @@ public class CicloCarro {
     public void run(){
         try {
             while (true){
-                frentista.pedirPermissao(carro.getId());
+                frentista.pedirPermissao(carro.getCarroId());
 
                 // Aqui ainda falta pegar bombas, abastecer, soltar bombas (Arthur e Rose)
 
-                frentista.liberarPermissao(carro.getId());
+                frentista.liberarPermissao(carro.getCarroId());
             }
         }catch (Exception e){
             e.printStackTrace();

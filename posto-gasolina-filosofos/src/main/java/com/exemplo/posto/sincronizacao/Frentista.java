@@ -1,6 +1,5 @@
 package sincronizacao;
 
-
 import simulacao.LoggerSimples;
 
 import java.util.concurrent.Semaphore;

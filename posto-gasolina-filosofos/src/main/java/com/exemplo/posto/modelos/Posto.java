@@ -2,8 +2,10 @@ package modelos;
 
 import modelos.Bomba;
 import modelos.Carro;
+import sincronizacao.ControleBombas;
 import sincronizacao.Frentista;
 
+import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class Posto {
@@ -22,6 +24,9 @@ public class Posto {
         // esta chamando a classe frentista
         Frentista frentista = new Frentista(NUM_CARROS);
        // Semaphore frentista = new Semaphore(NUM_CARROS - 1);
+
+        ControleBombas controle = new ControleBombas(NUM_BOMBAS, List.of(bombas));
+        Carro.setControleBombas(controle);
 
         // Cria e inicializa os carros como threads (Rose vai implementar)
         Carro[] carros = new Carro[NUM_CARROS];

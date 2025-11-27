@@ -1,10 +1,10 @@
 package sincronizacao;
 
-import com.exemplo.posto.modelos.Bomba;
-import com.exemplo.posto.modelos.Carro;
+import modelos.Bomba;
+import modelos.Carro;
+import simulacao.LoggerSimples;
 
 import java.util.List;
-import com.exemplo.posto.simulacao.LoggerSimples;
 
 public class ControleBombas {
 
@@ -35,7 +35,7 @@ public class ControleBombas {
             bomba1.setEmUso(true);
             bomba2.setEmUso(true);
 
-            LoggerSimples.log("Carro " + carro.getId() + " ALOCOU as Bombas " + bomba1.getId() + " e " + bomba2.getId());
+            LoggerSimples.log("Carro " + carro.getCarroId() + " ALOCOU as Bombas " + bomba1.getId() + " e " + bomba2.getId());
             return List.of(bomba1, bomba2);
         }
         return null;
@@ -43,16 +43,16 @@ public class ControleBombas {
 
     public List<Bomba> pedirDuasBombas(Carro carro) throws InterruptedException {
         while (true) {
-            frentista.pedirPermissao(carro.getId());
+            frentista.pedirPermissao(carro.getCarroId());
 
             List<Bomba> bombasAlocadas = procurarBombasLivres(carro);
 
             if (bombasAlocadas != null) {
                 return bombasAlocadas;
             } else {
-                frentista.liberarPermissao(carro.getId());
+                frentista.liberarPermissao(carro.getCarroId());
 
-                LoggerSimples.log("Carro " + carro.getId() + " não encontrou par livre. Esperando e tentando novamente.");
+                LoggerSimples.log("Carro " + carro.getCarroId() + " não encontrou par livre. Esperando e tentando novamente.");
 
                 Thread.sleep(100);
             }
