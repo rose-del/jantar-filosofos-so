@@ -227,3 +227,9 @@ Este projeto demonstra como problemas clássicos de **concorrência e sincroniza
 * Logs seguros
 
 A solução é estável, impede deadlock, evita starvation e representa fielmente a dinâmica do problema original do Jantar dos Filósofos.
+
+# **Autores**
+- Rosenilda Santos da Silva
+- Paulo Sérgio Albino
+- Júlia Maria Benjamin
+- Arthur Santos
